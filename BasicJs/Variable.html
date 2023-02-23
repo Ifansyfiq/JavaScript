@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h1>variable in  js</h1>
+        <p id="js"></p>
+
+        <script>
+            /*
+             syntax variable
+             var var_name;
+                @
+             var var_name = value;   
+            */
+
+            var mesej = "hello world";
+            document.getElementById("js").innerHTML = mesej
+            document.write(mesej)
+            
+
+            document.write("<br> numbering value <br>")
+            var num1 = 4, num2 = 2.5;
+            var power2 = Math.pow(num1,2) //num1^2
+            var squareRoot2 = Math.sqrt(num1) //sqrt(num1)
+            var fixedVal = squareRoot2.toFixed(2) //determine decimals place that wanted to be
+
+            document.write("Value power : " + power2 + "<br>")
+            document.write("Value square root : " + squareRoot2 + "<br>")
+            document.write("Value fixed decimals to  : " + fixedVal + "<br>")
+
+            document.write("<br> array value <br>")
+            /* 
+            syntax : var var_name = new Array (value_1, value_2, value_n)
+            */
+            var car = new Array ("toyota", "proton", "honda")
+
+            for(var i = 0;i<3;i++)
+            {
+                document.write("" + car[i]+"<br>")
+            }
+
+        </script>
+
+    </body>
+</html>
