@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <form name="form1">
+            name: <input type="text" name="name" > </br>
+            weight (kg): <input type="number" name="weight" > </br>
+            height (meter): <input type="number" name="height"  > </br>
+            <input type="button" onclick="bmiCalc()" value="calculate">
+        </br>
+        </br>
+        BMI: <input type="text" name="bmi" readonly="readonly">
+        </br>
+        mesej: <input type="text" name="msg" readonly="readonly">
+        </form>
+
+        <script>
+            function bmiCalc(){
+                var weight, height, bmi, msg;
+                weight = parseFloat(document.form1.weight.value);
+                height = parseFloat(document.form1.height.value);
+
+                bmi = weight / (height * height);
+
+                if ( bmi<18.5 ){
+                    msg = "UnderWeight";
+                }
+                else if ( bmi>18.5 && bmi<24.9 ){
+                    msg = "Normal";
+                }
+                else
+                  msg = "OverWeight";
+                
+                /*
+                value first then variable
+                */  
+                document.form1.bmi.value = bmi;
+                document.form1.msg.value = msg;
+                
+            }
+
+        </script>
+    </body>
+</html>
