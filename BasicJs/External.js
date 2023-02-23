@@ -1,4 +1,4 @@
-function popUp()
+function popUp(x,y)
 {
-    alert("Hello World")
+    alert(" "+x + " " +y)
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+            <h1>Array in Js</h1>
+        <script>
+            var pc = new Array (3);
+            var car = new Array ("proton", "toyota", "honda");
+            
+            for(var i=0;i<3;i++){
+                pc[i] = prompt("enter pc brand");
+            }
+            document.write("Input Array:")
+            for(var k=0;k<3;k++){
+                document.write(" " +pc[k])
+            }
+            var combine = pc.concat(car);
+            document.write("<br>");
+           document.write("Combine Array:")
+            for(var j=0;j<combine.length;j++){
+                document.write(" "+combine[j])
+            }
+            document.write("<br>");
+            combine.sort();
+            document.write("After Sorting:")
+            for(var j=0;j<combine.length;j++){
+                document.write(" "+combine[j])
+            }
+            document.write("<br>");
+            combine.reverse();
+            document.write("After Reverse:")
+            for(var j=0;j<combine.length;j++){
+                document.write(" "+combine[j])
+            }
+        </script>
+    </body>
+</html>
