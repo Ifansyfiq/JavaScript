@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> <!--set char set about webpage-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--set view about webpage from mobile platform-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> <!-- Latest compiled and minified CSS -->  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> <!-- jQuery library -->  
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> <!-- Latest compiled JavaScript -->
+    </head>
+    <body>
+
+        <form name="form1">
+            name: <input type="text" name="name" > </br>
+            weight (kg): <input type="number" name="weight" > </br>
+            height (meter): <input type="number" name="height"  > </br>
+            <input type="button" onclick="bmiCalc()" value="calculate">
+        </br>
+        </br>
+        BMI: <input type="text" name="bmi" readonly="readonly">
+        </br>
+        mesej: <input type="text" name="msg" readonly="readonly">
+        </form>
+
+        <script>
+            function bmiCalc(){
+                var weight, height, bmi, msg;
+                weight = parseFloat(document.form1.weight.value);
+                height = parseFloat(document.form1.height.value);
+
+                bmi = weight / (height * height);
+
+                if ( bmi<18.5 ){
+                    msg = "UnderWeight";
+                }
+                else if ( bmi>18.5 && bmi<24.9 ){
+                    msg = "Normal";
+                }
+                else
+                  msg = "OverWeight";
+                
+                /*
+                value first then variable
+                */  
+                document.form1.bmi.value = bmi;
+                document.form1.msg.value = msg;
+                
+            }
+
+        </script>
+    </body>
+</html>
