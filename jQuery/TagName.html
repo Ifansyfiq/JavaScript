@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <p>click to dissapear</p>
+    <p>gone</p>
+    <p>gone too</p>
+</body>
+    <script>
+        $(document).ready(function(){
+            $("p").click(function(){
+                $(this).hide()
+            })
+        })
+    </script>
+
+</html>
