@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> <!--set char set about webpage-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--set view about webpage from mobile platform-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> <!-- Latest compiled and minified CSS -->  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> <!-- jQuery library -->  
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> <!-- Latest compiled JavaScript -->
+    </head>
+    <body>
+
+        <div class="container">
+            <form name="marking">
+                <div class="cont-class">
+                    <label for="user">Insert Ur Name:</label>
+                    <input type="text" class="cont-class" id="name">
+                </div>
+                <div class="cont-class">
+                    <label for="user">Insert Ur Mark:</label>
+                    <input type="number" class="cont-class" id="mark">
+                </div>
+
+                <button type="button" onclick="pass()" class="btn btn-info">calculate</button>
+
+                <div class="cont-class">
+                    <label for="gred">Gred:</label>
+                    <input type="text" class="cont-class" id="gred" readonly="readonly">
+                </div>
+            </form>
+        </div>
+
+    </body>
+    <script>    
+        function pass(){
+        var mark, gred; 
+         mark = parseInt(document.marking.mark.value);
+
+        if (mark<50){
+            gred = "F"
+        }
+        else if (mark>49 && mark<60){
+            gred = "D"
+        }
+        else if (mark>59 && mark<70){
+            gred = "C"
+        }
+        else if (mark>69 && mark<80){
+            gred = "B"
+        }
+        else 
+        gred = "A"
+
+        document.marking.gred.value = gred;
+    }
+    
+    </script>
+</html>
