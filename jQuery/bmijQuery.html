@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <form name="form1">
+            name: <input type="text" name="name" > </br>
+            weight (kg): <input type="number" name="weight" id="weight" > </br>
+            height (meter): <input type="number" name="height" id="height" > </br>
+            <input type="button" value="calculate" id="submit">
+        </br>
+        </br>
+        BMI: <input type="text" name="bmi" id="bmi">
+        </br>
+        mesej: <input type="text" name="msg" id="msg">
+        </form>
+
+        <script>
+            $(document).ready(function(){
+                $("#submit").click(function(){
+                    var weight = parseFloat($("#weight").val())
+                    var height = parseFloat($("#height").val())
+                    var bmi = weight/(height*height);
+                    var msg;
+                    if ( bmi<18.5 ){
+                    msg = "UnderWeight";
+                     }
+                    else if ( bmi>18.5 && bmi<24.9 ){
+                    msg = "Normal";
+                    }
+                    else
+                    msg = "OverWeight";
+                    
+                    $("#bmi").val(bmi.toFixed(2))
+                    $("#msg").val(msg)
+                })
+            })
+        </script>
+    </body>
+</html>
